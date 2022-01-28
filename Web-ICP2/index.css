@@ -1,5 +1,35 @@
+
 h1 {
-    color: red;
+    color: darkblue;
     font-size: 20px;
+
 }
 
+.icon {
+    max-width: 16px;
+}
+nav {
+    background-color: slategrey;
+}
+/* styles nav bar elements */
+nav li {
+    display: inline;
+    color: white;
+    margin-right: 5px;
+}
+/* styles content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgray;
+
+
+}
+
+.item {
+    height: auto;
+    margin: 10px;
+    background-color: white;
+    width: 50%;
+}
