@@ -5,17 +5,19 @@ h1 {
 
 }
 
+/* styles nav bar elements */
+
+nav {
+    background-color: gray;
+    border-color: aquamarine;
+    padding: 10px
+}
+nav a {
+    color: white;
+}
+
 .icon {
     max-width: 16px;
-}
-nav {
-    background-color: slategrey;
-}
-/* styles nav bar elements */
-nav li {
-    display: inline;
-    color: white;
-    margin-right: 5px;
 }
 /* styles content */
 .container {
@@ -23,8 +25,6 @@ nav li {
     flex-direction: column;
     align-items: center;
     background-color: darkgray;
-
-
 }
 
 .item {
