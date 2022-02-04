@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head {
+    margin: 0 auto;
+    width: 1000px;
+    height: 140px;
+}
+.head1 {
+    display: inline-block;
+    float: left;
+}
+.head2 {
+    text-align: right;
+    display: inline-block;
+    float: right;
+    margin-top: 50px;
+    color: #747704;
+}
+.line {
+    width: 1000px;
+    height: 20px;
+    border-top: solid #BCBBBB 5px;
+    margin: 0 auto;
+}
+.image {
+    width: 1000px;
+    height: 430px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.image img{
+    width: 1000px;
+}
+.title {
+    color: #BCBBBB;
+    height: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.box {
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    color: #747704;
+}
+ul li {
+    list-style: none;
+}
+.box li {
+    width: 300px;
+    height: 400px;
+    float: left;
+    margin-right: 50px;
+}
+.app {
+    width: 300px;
+    height: 180px;
+    overflow: hidden;
+}
+.box img {
+    width: 300px;
+}
+.box .last {
+    margin-right: 0;
+}
+.app1 {
+    margin-top: 10px;
+    padding: 0 100px;
+}
+.app11 {
+    margin-top: 10px;
+    padding: 0 80px;
+}
+.app2 {
+    margin-top: 10px;
+    padding: 0 20px;
+}
+.app22 {
+    margin-top: 10px;
+    padding: 0 5px;
+}
