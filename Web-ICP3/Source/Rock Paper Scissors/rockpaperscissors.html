@@ -10,21 +10,11 @@
 </head>
 <body>
 <div>
+
     <div class="container">
+        <h1>Rock Paper Scissors</h1>
         <div class = "row">
-            <div id="moves">
-                <div class="col-sm" id="PlayerDecision">
-
-                </div>
-                <div class="col-sm" id="ComputerDecision">
-
-                </div>
-            </div>
-            <div id="results">
-
-            </div>
-        </div>
-        <div class = "row">
+            <!-- user input for rock paper scissors  -->
             <div class="col-sm">
                 <button id="Rock" onclick="playRockPaperScissors(this.id)">
                     Rock
@@ -41,20 +31,25 @@
                     Scissors
                 </button>
             </div>
-            <h1 id="age"></h1>
+        <div class = "container">
+            <!-- game results output for rock paper scissors-->
+            <div class="col-sm" id="results" >
+                <div class="col-sm" >
+                    Your move: <span id="PlayerDecision"></span>
+
+                <div class="col-sm">
+                    The computer's move: <span id="ComputerDecision"></span>
+                </div>
+            </div>
+            <div id="winner">
+
+            </div>
+        </div>
+
         </div>
 
     </div>
 
-    <script>
-
-        var colors = ["red", "blue", "green"]
-
-        console.log(age)
-
-        //document.getElementById('age').innerHTML = age;
-
-    </script>
 </div>
 </body>
 </html>
