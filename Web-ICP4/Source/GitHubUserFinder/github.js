@@ -1,10 +1,11 @@
-function lookupAccount(){
+
+
+function lookupAccount(account){
 
     var request = new XMLHttpRequest();
 
-    var url = "https://api.github.com/users/aha85b";
+    var url = "https://api.github.com/users/"+account;
     request.open("GET", url, false);
-    document.getElementById("")
     request.send();
 
     var json = request.responseText;
@@ -17,14 +18,13 @@ function lookupAccount(){
 
 function showAccountDetails(accountData)
 {
-    
+    document.getElementById("accountAvatar").src = accountData.avatar_url
+
     document.getElementById("accountLogin").innerHTML = accountData.login
     document.getElementById("accountName").innerHTML = accountData.name
     document.getElementById("accountId").innerHTML = accountData.id
     document.getElementById("accountLink").innerHTML = accountData.html_url
     document.getElementById("accountRepositoryCount").innerHTML = accountData.public_repos
-
-    document.getElementById("accountAvatar").innerHTML = accountData.avatar_url
 
 
 }
