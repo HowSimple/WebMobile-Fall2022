@@ -4,11 +4,13 @@ $( document ).ready(function() {
         lookupAccount(($('#accountInput').val()));
 
     });
+
     $(document).on('keypress',function(e) {
         if(e.which == 13) {
             lookupAccount(($('#accountInput').val()));
         }
     });
+
 
 });
 function lookupAccount(account){
