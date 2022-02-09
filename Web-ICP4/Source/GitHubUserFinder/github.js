@@ -1,5 +1,10 @@
+$( document ).ready(function() {
+    $('#submitAccount').click(function(){
+        lookupAccount(($('#accountInput').val()));
 
+    });
 
+});
 function lookupAccount(account){
 
     var request = new XMLHttpRequest();
