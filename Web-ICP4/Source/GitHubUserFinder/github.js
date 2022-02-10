@@ -38,6 +38,7 @@ function showAccountDetails(accountData)
     document.getElementById("accountId").innerHTML = accountData.id
     document.getElementById("accountLink").innerHTML = accountData.html_url
     document.getElementById("accountRepositoryCount").innerHTML = accountData.public_repos
+    console.log(accountData.public_repos)
 
 
 }
