@@ -11,19 +11,7 @@ export class CountdownComponent implements OnInit {
   //@Input()  size!: number | string;
   dateForm: any;
   constructor() {}
-  profileForm = this.group({
-    firstName: [''],
-    lastName: [''],
-    address: this.fb.group({
-      street: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
-    }),
-    aliases: this.fb.array([
-      this.fb.control('')
-    ])
-  });
+
   ngOnInit(): void {
 
   }
