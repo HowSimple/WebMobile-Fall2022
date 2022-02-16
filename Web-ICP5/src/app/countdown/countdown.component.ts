@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountdownComponent implements OnInit {
 
-  constructor() { }
+  constructor() {alert('Test'); }
 
   ngOnInit(): void {
   }
 
+  onClick($event: MouseEvent) {
+    //const evtMsg = event ? ' Event target is ' + (event.target as HTMLElement).textContent : '';
+    alert('Saved.');
+  }
 }
+
