@@ -2,19 +2,26 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
+
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.css']
 })
 export class CountdownComponent implements OnInit {
 
-  constructor() {alert('Test'); }
+  constructor() {}
 
   ngOnInit(): void {
+
+  }
+  countdown(){
+
   }
 
-  onClick($event: MouseEvent) {
+  onClick() {
     //const evtMsg = event ? ' Event target is ' + (event.target as HTMLElement).textContent : '';
     alert('Saved.');
   }
+
+
 }
 
