@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { MemorygameComponent } from './memorygame/memorygame.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-list/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountdownComponent,
     MemorygameComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    TodoListComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

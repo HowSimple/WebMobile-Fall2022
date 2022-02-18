@@ -12,7 +12,6 @@ import { timer, Subscription, interval } from 'rxjs';
 
 
 export class CountdownTimerComponent implements OnInit{
-  // private subscription: Subscription;
 
   public currentTime = new Date();
   public eventTime = new Date('Jan 01 2025 00:00:00');
