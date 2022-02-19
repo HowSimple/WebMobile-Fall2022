@@ -39,7 +39,7 @@ class TodoItem {
   done: boolean;
 
   constructor() {
-    this.description = "test";
+    this.description = "";
     this.done = false;
   }
 

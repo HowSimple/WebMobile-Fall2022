@@ -1,1 +1,8 @@
-<p>todo-list works!</p>
+<div class="container">
+  <h1>My Todo List</h1>
+
+  <div> <button (click)="addNewTodo()" > Add Task</button></div>
+  <ul>
+    <li *ngFor="let task of todoList"><app-todo-item></app-todo-item></li>
+  </ul>
+</div>
