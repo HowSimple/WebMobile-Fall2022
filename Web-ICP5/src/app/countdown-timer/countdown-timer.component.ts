@@ -13,34 +13,51 @@ import { timer, Subscription, interval } from 'rxjs';
 
 export class CountdownTimerComponent implements OnInit{
 
-  public currentTime = new Date();
+  public startTime = new Date();
   public eventTime = new Date('Jan 01 2025 00:00:00');
   public daysRemaining!: number;
   public hoursRemaining!: number;
   public minutesRemaining!: number;
   //public secondsRemaining!: number;
-  public month!:number;
-  public day!:number
-  public year!:number;
-  public startTimer(){
-    this.eventTime.setMonth(this.month)
-    this.eventTime.setFullYear(this.year)
-    this.eventTime.setDate(this.day)
+  public millisecondsRemaining!: number;
+  public eventMonth!:number;
+  public eventDay!:number
+  public eventYear!:number;
 
-
-  }
 
   //private duration: number;
-  public updateTime(seconds: number) {
+ // public updateTime(month: number, day:number, year:number) {
+
+  public updateTime() {
     //console.log(seconds)
-    var hoursInADay = 24;
-    var minutesInAnHour = 60;
-    var SecondsInAMinute  = 60;
+
     //this.secondsRemaining = seconds;
+    this.startTime = new Date();
+    this.eventTime = new Date(`${this.eventMonth}/${this.eventDay}/${this.eventYear}`)
+    console.log(`${this.eventMonth}/${this.eventDay}/${this.eventYear}`)
+    var distance = this.eventTime.getTime() - new Date().getTime();
+    if (distance < 0) {
 
-    this.daysRemaining = this.eventTime.getTime() - this.currentTime.getTime()
+      clearInterval(1000);
+      //document.getElementById('countdown').innerHTML = 'EXPIRED!';
 
-    this.minutesRemaining = this.eventTime.getMinutes() - this.currentTime.getMinutes()
+      return;
+    }
+    var milisecondsInASecond = 1000;
+    var SecondsInAMinute  = milisecondsInASecond*60;
+
+
+    var minutesInAnHour = SecondsInAMinute * 60 ;
+    var hoursInADay = minutesInAnHour* 24;
+    this.daysRemaining = Math.floor(distance / hoursInADay);
+    this.hoursRemaining = Math.floor((distance % hoursInADay) / minutesInAnHour);
+    this.minutesRemaining = Math.floor((distance % minutesInAnHour) / SecondsInAMinute);
+    this.millisecondsRemaining = distance
+    //this.secondsRemaining = Math.floor((distance % SecondsInAMinute) / milisecondsInASecond);
+    //this.daysRemaining = this.eventTime.getDay() - this.currentTime.getDay()
+    //this.hoursRemaining = this.eventTime.getH() - this.currentTime.getDay()
+
+   // this.minutesRemaining = this.eventTime.getMinutes() - this.currentTime.getMinutes()
     console.log(this.daysRemaining)
     //console.log(seconds)
 
@@ -53,24 +70,27 @@ export class CountdownTimerComponent implements OnInit{
   }
 
   public startCountdown() {
+    this.updateTime()
     const timerInterval = interval(1000)
-    // const timer = timer
-    this.day = 1, this.month = 1, this.year = 2000;
-  }
+    timerInterval.pipe(take(this.millisecondsRemaining), map(count => this.millisecondsRemaining - count)).subscribe(seconds => {
+      this.updateTime();
+      // const timer = timer
+      //this.day = 1, this.month = 1, this.year = 2000;
+    })}
 
   ngOnInit(): void {
 
-    const duration = 15 * 60 // 15 minutes
+    //const duration = 15 * 60 // 15 minutes
 
-    interval(1000).pipe(take(duration), map(count => duration - count)).subscribe(seconds => {
-      this.updateTime(seconds);
+    //interval(1000).pipe(take(this.), map(count => duration - count)).subscribe(seconds => {
+     // this.updateTime();
       //this.duration = 1000
 
       //this.subscription = interval(this.duration).subscribe(x => this.timeDifference())
-    })
+    //})
 
     // private timeDifference() {
     //   var difference = this.eventTime.getTime() - this.currentTime.getTime()
     //
-    // }
+    // }3
   }}
