@@ -11,17 +11,12 @@
 <body>
   <p>TO DO LIST FOR 2022</p>
   <div class="title">Caleb Vaughn & Jingfan Bai</div>
-  <div>
-    <div class="item">item1</div>
-    <div class="item">item2</div>
-    <div class="item">item3</div>
-    <div class="item">item4</div>
-    <div class="item">item5</div>
-    <div class="item">item6</div>
-    <div class="item">item7</div>
-    <div class="item">item8</div>
-    <div class="item">item9</div>
-    <div class="item">item10</div>
-  </div>
+
+  <div> <button (click)="addNewTodo()" > Add Task</button></div>
+  <ul>
+    <li class="item"  *ngFor="let task of todoList"><app-todo-item></app-todo-item></li>
+  </ul>
+
+
 </body>
 </html>

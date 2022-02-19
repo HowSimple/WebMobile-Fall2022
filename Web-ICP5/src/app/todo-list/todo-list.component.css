@@ -7,7 +7,7 @@
 p {
   color: white;
   text-align: center;
-  font-size: 90px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -19,14 +19,14 @@ p {
 }
 
 .item {
-  font-size: 30px;
+  font-size: 15px;
   font-weight: 500;
   background-color: white;
-  width: 1500px;
-  height: 110px;
-  line-height: 110px;
+  width: 100%;
+  height: auto;
+  line-height: 40px;
   text-indent: 2em;
-  margin: 40px auto;
+  margin: 15px auto;
   border-radius: 20px;
 }
 
