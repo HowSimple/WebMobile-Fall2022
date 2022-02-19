@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import {map, Observable, take} from 'rxjs';
-import {  Subscription, interval } from 'rxjs';
+import {Component, Input, OnInit} from '@angular/core';
+import {map, interval, take} from 'rxjs';
+
 
 
 
