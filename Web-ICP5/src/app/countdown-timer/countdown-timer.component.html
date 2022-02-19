@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="countdown-timer.component.css">
 </head>
 <body>
-<div class="container" id="date" >
+<div class="container" id="date"  >
   <form #userForm="ngForm" (ngSubmit)="startTimer(userForm.value)" >
   <span class="date">Year: <input id="Year" type="number" min="2022" max="2122"  /></span>
   <span class="date">&nbsp;Mouth: <input id="Month" type="number" min="1" max="12"  /></span>
@@ -17,8 +17,8 @@
   <span class="date">&nbsp;Day: <input id="Day" type="number" min="1" max="31" /></span>
     <input type="submit" value="Start Countdown" id="btn1"></form>
 
-  <div id="countdown">
-    <button id="btn2">Stop Countdown</button>
+  <div id="countdown" *ngIf="countdownStarted">
+
     <p class="show">To ：<b>{{eventTime.toDateString()}} </b>  </p>
     <span><strong>{{daysRemaining}} </strong></span> D
     <span><strong>{{hoursRemaining}} </strong></span> H
