@@ -10,17 +10,19 @@
 </head>
 <body>
 <div class="container" id="time">
-  <span id="year">Year: <input type="number" min="2022" max="2122" [value]="eventYear" /></span>
-  <span id="month">&nbsp;Mouth: <input type="number" min="1" max="12" [value]="eventMonth" /></span>
+  <form #userForm="ngForm" (ngSubmit)="startTimer(userForm.value)" >
+  <span class="date">Year: <input id="Year" type="number" min="2022" max="2122"  /></span>
+  <span class="date">&nbsp;Mouth: <input id="Month" type="number" min="1" max="12"  /></span>
 
-  <span id="day">&nbsp;Day: <input type="number" min="1" max="31" [value]="eventDay" /></span>
-    <button (click)="startCountdown()" id="btn1">Start Countdown</button><button id="btn2">Stop Countdown</button>
-    <p class="show">To ：<b>{{eventMonth}} / {{eventMonth}} / {{eventYear}}  </b> rest </p>
+  <span class="date">&nbsp;Day: <input id="Day" type="number" min="1" max="31" /></span>
+    <input type="submit" value="submit" id="btn1"></form>
+  <button id="btn2">Stop Countdown</button>
+    <p class="show">To ：<b>{{eventTime.toDateString()}} </b> rest </p>
   <div id="start">
     <span><strong>{{daysRemaining}} </strong></span> D
     <span><strong>{{hoursRemaining}} </strong></span> H
     <span><strong> {{minutesRemaining}}</strong></span> M
-    <span><strong>00 </strong></span> S
+    <span><strong>{{secondsRemaining}} </strong></span> S
   </div>
 </div>
 </body>
