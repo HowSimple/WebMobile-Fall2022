@@ -19,8 +19,16 @@ export class CountdownTimerComponent implements OnInit{
   public hoursRemaining!: number;
   public minutesRemaining!: number;
   //public secondsRemaining!: number;
+  public month!:number;
+  public day!:number
+  public year!:number;
+  public startTimer(){
+    this.eventTime.setMonth(this.month)
+    this.eventTime.setFullYear(this.year)
+    this.eventTime.setDate(this.day)
 
 
+  }
 
   //private duration: number;
   public updateTime(seconds: number) {
@@ -47,6 +55,7 @@ export class CountdownTimerComponent implements OnInit{
   public startCountdown() {
     const timerInterval = interval(1000)
     // const timer = timer
+    this.day = 1, this.month = 1, this.year = 2000;
   }
 
   ngOnInit(): void {

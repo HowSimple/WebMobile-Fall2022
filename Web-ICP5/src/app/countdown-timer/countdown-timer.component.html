@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="countdown-timer.component.css">
 </head>
 <body>
-<div id="time">
-  <span class="date">Year: <input type="number" min="2022" max="2122" value="2022" /></span>
-  <span class="date">&nbsp;Mouth: <input type="number" min="1" max="12" value="2" /></span>
-  <span class="date">&nbsp;Day: <input type="number" min="1" max="31" value="18" /></span>
-    <button id="btn1">Start Countdown</button><button id="btn2">Stop Countdown</button>
+<div class="container" id="time">
+  <span id="year">Year: <input type="number" min="2022" max="2122" [value]="year" /></span>
+  <span id="month">&nbsp;Mouth: <input type="number" min="1" max="12" [value]="month" /></span>
+
+  <span id="day">&nbsp;Day: <input type="number" min="1" max="31" [value]="day" /></span>
+    <button (click)="startTimer()" id="btn1">Start Countdown</button><button id="btn2">Stop Countdown</button>
     <p class="show">To ：<b>2022 / 2 / 18  </b> rest </p>
   <div id="start">
     <span><strong>00 </strong></span> D
