@@ -1,0 +1,39 @@
+#time {
+
+  height: 200px;
+  margin: 100px auto;
+  text-align: center;
+}
+.countdown{
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+  background-color: #8fb4f9;
+}
+
+
+#time .date,
+input{
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 10px;
+  /*font-size: 45px;*/
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  margin: 0 0 0 71px;
+  border-radius: 10px;
+  /*font-size: 30px;*/
+}
+
+#start,
+.show {
+  width: 400px;
+  font-size: 32px;
+  margin: 30px auto;
+}
