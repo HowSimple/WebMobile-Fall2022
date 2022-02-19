@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: darkslategrey;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.item {
+  font-size: 30px;
+  font-weight: 500;
+  background-color: white;
+  width: 1500px;
+  height: 110px;
+  line-height: 110px;
+  text-indent: 2em;
+  margin: 40px auto;
+  border-radius: 20px;
+}
+
+.item:hover {
+  box-shadow: 12px 12px 15px black;
+}
