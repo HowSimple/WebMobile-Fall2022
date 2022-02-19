@@ -10,16 +10,16 @@
 </head>
 <body>
 <div class="container" id="time">
-  <span id="year">Year: <input type="number" min="2022" max="2122" [value]="year" /></span>
-  <span id="month">&nbsp;Mouth: <input type="number" min="1" max="12" [value]="month" /></span>
+  <span id="year">Year: <input type="number" min="2022" max="2122" [value]="eventYear" /></span>
+  <span id="month">&nbsp;Mouth: <input type="number" min="1" max="12" [value]="eventMonth" /></span>
 
-  <span id="day">&nbsp;Day: <input type="number" min="1" max="31" [value]="day" /></span>
-    <button (click)="startTimer()" id="btn1">Start Countdown</button><button id="btn2">Stop Countdown</button>
-    <p class="show">To ：<b>2022 / 2 / 18  </b> rest </p>
+  <span id="day">&nbsp;Day: <input type="number" min="1" max="31" [value]="eventDay" /></span>
+    <button (click)="startCountdown()" id="btn1">Start Countdown</button><button id="btn2">Stop Countdown</button>
+    <p class="show">To ：<b>{{eventMonth}} / {{eventMonth}} / {{eventYear}}  </b> rest </p>
   <div id="start">
-    <span><strong>00 </strong></span> D
-    <span><strong>00 </strong></span> H
-    <span><strong>00 </strong></span> M
+    <span><strong>{{daysRemaining}} </strong></span> D
+    <span><strong>{{hoursRemaining}} </strong></span> H
+    <span><strong> {{minutesRemaining}}</strong></span> M
     <span><strong>00 </strong></span> S
   </div>
 </div>
