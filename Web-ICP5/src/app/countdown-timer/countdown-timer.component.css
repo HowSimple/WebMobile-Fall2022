@@ -1,8 +1,16 @@
 #time {
-  width: 700px;
+
   height: 200px;
   margin: 100px auto;
+  text-align: center;
 }
+.countdown{
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+  background-color: #8fb4f9;
+}
+
 
 #time .date,
 input{
