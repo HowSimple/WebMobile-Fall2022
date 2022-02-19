@@ -54,9 +54,8 @@ export class CountdownTimerComponent implements OnInit{
     this.hoursRemaining = Math.floor((distance % hoursInADay) / minutesInAnHour);
     this.minutesRemaining = Math.floor((distance % minutesInAnHour) / SecondsInAMinute);
     this.millisecondsRemaining = distance
-    this.secondsRemaining = distance /milisecondsInASecond;
+    this.secondsRemaining = Math.floor((distance % (SecondsInAMinute)) / milisecondsInASecond);
 
-    //this.secondsRemaining = Math.floor((distance % SecondsInAMinute) / milisecondsInASecond);
     //this.daysRemaining = this.eventTime.getDay() - this.currentTime.getDay()
     //this.hoursRemaining = this.eventTime.getH() - this.currentTime.getDay()
 
