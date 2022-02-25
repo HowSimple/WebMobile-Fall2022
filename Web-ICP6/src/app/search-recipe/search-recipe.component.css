@@ -25,8 +25,20 @@
 .thumbnail-description {
   min-height: 40px;
 }
+.ingredient-show {
+  display: none;
+}
 
+.ingredient-show:target {
+  display: block;
+}
 .thumbnail:hover {
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+.ingredient {
+  width: 400px;
+}
+.image-link {
+  width: 400px;
 }

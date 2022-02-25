@@ -26,9 +26,15 @@
         <div class="panel-heading"><b>How to make</b></div>
         <div class="panel-body">
           <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
+
             <div class="pull-left">
               <h4 class="list-group-item-heading">{{ recipe.recipe.label }}</h4>
-              <a href="{{recipe.recipe.url}}" class="list-group-item-text" target="_blank">{{ recipe.recipe.url }}</a>
+
+              <div class="ingredient-show" *ngFor="let ingredient of recipe.recipe.ingredientLines" class="list-group-item clearfix ingredient">{{ ingredient}}</div>
+
+              <div class="image-link"><a href="{{recipe.recipe.url}}" class="list-group-item-text" target="_blank">Link</a></div>
+              <div ><button onclick="document.getElementsByClassName('ingredient-show').style.display= 'none'">Link</button>
+              </div>
             </div>
 
             <span class="pull-right">
