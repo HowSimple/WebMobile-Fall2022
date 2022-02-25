@@ -45,9 +45,25 @@ export class SearchRecipeComponent implements OnInit {
       .then(response => response.json())
       .then(response => console.log(response))
       .catch(err => console.error(err));
-    fetch(request)
+
+
+    //getData(url, (data) => console.log({ data }))
+
+  }
+  recipeAPIQuery(search) {
+    console.log(search);
+    console.log(location);
+    var request = `https://api.foursquare.com/v2/venues/search?client_id=FE31JYBN1VAP2MJSJPNWWHMPVT2QKF5HQF2AHXSNJ3LW51A0&client_secret=CSY1N5LOXDM0VCFKOSJKWXONC2HB3GZCV1NES5LDXUOXGILR&query=${search}&near=${location}&v=20220221`;
+    ;
+
+    console.log(request)
+    const options = {method: 'GET', headers: {Accept: 'application/json'}};
+
+    fetch(request, options)
       .then(response => response.json())
-      .then(data => console.log(data.response));
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+
 
     //getData(url, (data) => console.log({ data }))
 
