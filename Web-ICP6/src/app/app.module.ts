@@ -8,7 +8,6 @@ import {HeaderComponent} from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SearchRecipeComponent } from './search-recipe/search-recipe.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,13 +16,12 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     SearchRecipeComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        HttpClientJsonpModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientJsonpModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -32,23 +32,22 @@ export class SearchRecipeComponent implements OnInit {
   }
 
 
-  foursquareApiQuery(search) {
+  foursquareApiQuery(search, location) {
     console.log(search);
-    //console.log(location);
-    const options = {method: 'GET', headers: {Accept: 'application/json'}};
-
-
-    var request = `https://api.foursquare.com/v2/venues/search?client_id=FE31JYBN1VAP2MJSJPNWWHMPVT2QKF5HQF2AHXSNJ3LW51A0&client_secret=CSY1N5LOXDM0VCFKOSJKWXONC2HB3GZCV1NES5LDXUOXGILR&query=${search}&near=${location}&v=20220224`;
+    console.log(location);
+    var request = `https://api.foursquare.com/v2/venues/search?client_id=FE31JYBN1VAP2MJSJPNWWHMPVT2QKF5HQF2AHXSNJ3LW51A0&client_secret=CSY1N5LOXDM0VCFKOSJKWXONC2HB3GZCV1NES5LDXUOXGILR&query=${search}&near=${location}&v=20220221`;
     ;
 
     console.log(request)
-    //const options = {method: 'GET', headers: {Accept: 'application/json'}};
+    const options = {method: 'GET', headers: {Accept: 'application/json'}};
 
     fetch(request, options)
       .then(response => response.json())
       .then(response => console.log(response))
       .catch(err => console.error(err));
-
+    fetch(request)
+      .then(response => response.json())
+      .then(data => console.log(data.response));
 
     //getData(url, (data) => console.log({ data }))
 
@@ -65,7 +64,9 @@ export class SearchRecipeComponent implements OnInit {
     }
 
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null && this.recipeValue !== '') {
-       // this.foursquareApiQuery()
+      /**
+       * Write code to get place
+       */
 
 
     }
