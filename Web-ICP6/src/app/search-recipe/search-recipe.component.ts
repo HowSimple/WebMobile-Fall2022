@@ -53,8 +53,8 @@ export class SearchRecipeComponent implements OnInit {
   recipeAPIQuery(search) {
     console.log(search);
     console.log(location);
-    var request = `https://api.foursquare.com/v2/venues/search?client_id=FE31JYBN1VAP2MJSJPNWWHMPVT2QKF5HQF2AHXSNJ3LW51A0&client_secret=CSY1N5LOXDM0VCFKOSJKWXONC2HB3GZCV1NES5LDXUOXGILR&query=${search}&near=${location}&v=20220221`;
-    ;
+    var request = `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=7d5182c5&app_key=a0fa0e82fa892fcae09dd4af3f6a2993`;
+
 
     console.log(request)
     const options = {method: 'GET', headers: {Accept: 'application/json'}};
