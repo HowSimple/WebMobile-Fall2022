@@ -61,8 +61,18 @@ export class SearchRecipeComponent implements OnInit {
 
     fetch(request, options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => {console.log(response.hits);
+        this.recipeList.push.apply(this.recipeList, response.hits);
+        console.log(response.hits.recipe);
+
+        console.log(response.hits[0].recipe.label);
+
+      })
+
       .catch(err => console.error(err));
+
+
+
 
 
     //getData(url, (data) => console.log({ data }))
