@@ -1,0 +1,8 @@
+
+<div ngif>
+
+  <div class="ingredient-show" *ngFor="let detail of list.recipe.ingredientLines" class="list-group-item clearfix ingredient">{{ detail}}</div>
+
+  <div ><button onclick="document.getElementsByClassName('ingredient-show').style.display= 'none'">Link</button>
+  </div>
+</div>
