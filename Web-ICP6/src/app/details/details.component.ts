@@ -14,4 +14,10 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  toggleVisibility() {
+    if (this.isHidden == false)
+      this.isHidden = true;
+    else this.isHidden = false;
+  }
 }

@@ -7,15 +7,11 @@
         <div class="form-group col-lg-6 col-lg-offset-3 input-group">
           <input [(ngModel)]="recipeValue" name="recipeValue"  class="form-control" placeholder="Recipe name:" type="text">
           <span class="input-group-addon">-</span>
-          
+
 
         </div>
         <br>
         <button  type="submit" (click)="getVenues()" class="btn btn primary col-lg-2 col-lg-offset-5 " >Go</button>
-
-
-
-
       </div>
     </form>
   </div>
@@ -28,19 +24,14 @@
         <div class="panel-body">
 
           <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
-            <app-details [list]="recipe"></app-details>
-            <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ recipe.recipe.label }}</h4>
+            <h4 class="list-group-item-heading">{{ recipe.recipe.label }}</h4>
+            <div class="image-link"><a href="{{recipe.recipe.url}}" class="list-group-item-text" target="_blank">Link</a></div>
+            <img src="{{recipe.recipe.image}}" style="width: 70px; height: 50px;" align="center"/>
+            <app-details [list]="recipe">test</app-details>
 
-              <div class="ingredient-show" *ngFor="let ingredient of recipe.recipe.ingredientLines" class="list-group-item clearfix ingredient">{{ ingredient}}</div>
-
-              <div class="image-link"><a href="{{recipe.recipe.url}}" class="list-group-item-text" target="_blank">Link</a></div>
-              <div ><button onclick="document.getElementsByClassName('ingredient-show').style.display= 'none'">Link</button>
-              </div>
-            </div>
 
             <span class="pull-right">
-          <img src="{{recipe.recipe.image}}" style="width: 70px; height: 50px;" align="center"/>
+
 
       </span>
 
@@ -49,12 +40,12 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6">
+   <!-- <div class="col-lg-6">
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Where to get</b></div>
         <div class="panel-body">
 
-          <div *ngFor="let venue of venueList" class="list-group-item clearfix">
+          <div  *ngFor="let venue of venueList" class="list-group-item clearfix">
             <div class="pull-left">
               <h4 class="list-group-item-heading">{{ venue.name }}</h4>
             </div>
@@ -69,7 +60,7 @@
 
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </div>
 

@@ -1,5 +1,5 @@
-
-<div ngif>
+<button (click)="toggleVisibility()"></button>
+<div *ngIf="isHidden">
 
   <div class="ingredient-show" *ngFor="let detail of list.recipe.ingredientLines" class="list-group-item clearfix ingredient">{{ detail}}</div>
 
