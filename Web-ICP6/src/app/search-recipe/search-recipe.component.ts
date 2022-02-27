@@ -48,18 +48,32 @@ export class SearchRecipeComponent implements OnInit {
     if (this.recipeValue !== null) {
       this.recipeAPIQuery(this.recipeValue);
     }
+    if(this.placeValue!== null){
+      this.foursquareApiQuery(this.recipeValue,this.placeValue)
+    }
   }
 
   foursquareApiQuery(search, location) {
     console.log(search);
     console.log(location);
-    var request = `https://api.foursquare.com/v2/venues/search?client_id=FE31JYBN1VAP2MJSJPNWWHMPVT2QKF5HQF2AHXSNJ3LW51A0&client_secret=CSY1N5LOXDM0VCFKOSJKWXONC2HB3GZCV1NES5LDXUOXGILR&query=${search}&near=${location}&v=20220221`;
-    ;
-    const options = {method: 'GET', headers: {Accept: 'application/json'}};
+    const options = {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        Authorization: 'fsq3Iab1bKqujnaKRwoZFWAqE9Xd8iR6fja/cuouM/06Kp4='
+      }
+    };
 
-    fetch(request, options)
+    fetch(`https://api.foursquare.com/v3/places/search?query=${this.recipeValue}&near=${this.placeValue}`, options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => {
+
+        this.venueList = response.results
+        console.log(this.venueList[0]);
+        console.log(this.venueList);
+
+        //this.venueList.push.apply(this.venueList, response.results);
+      })
       .catch(err => console.error(err));
   }
 
