@@ -13,6 +13,10 @@
 #results{
   width: 50%;
 }
+.col-lg-6{
+  max-width: 50%;
+  background-color: pink;
+}
 .desc {
   font-family: Georgia;
   font-size: 17px;
