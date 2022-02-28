@@ -18,7 +18,7 @@
   </div>
 </div><br><br>
 
-<div  id="results2" class="container">
+<div  id="results" class="container">
   <div class="row">
     <div class="col-sm">
       <div class="panel panel-default ">
@@ -35,22 +35,7 @@
 
         </div>
       </div>
-    </div> <div class="col-sm">
-    <div class="panel panel-default ">
-      <div  class="panel-heading"><b>How to make</b></div>
-      <div class="panel-body">
-
-        <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
-          <h4 class="list-group-item-heading">{{ recipe.recipe.label }}</h4>
-          <div class="image-link"><a href="{{recipe.recipe.url}}" class="list-group-item-text" target="_blank">Link</a></div>
-          <img src="{{recipe.recipe.image}}" style="width: 70px; height: 50px;" align="center"/>
-          <app-details [list]="recipe">test</app-details>
-
-        </div>
-
-      </div>
     </div>
-  </div>
     <div class="col-sm">
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Where to get</b></div>
